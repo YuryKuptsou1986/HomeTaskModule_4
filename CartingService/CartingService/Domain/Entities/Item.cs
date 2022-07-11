@@ -1,8 +1,9 @@
-﻿namespace CartService.Domain.Entities
+﻿namespace BasketService.Domain.Entities
 {
     public class Item
     {
         public int Id { get; private set; }
+        public int ItemId { get; private set; }
         public string Name { get; private set; }
         public ImageInfo ImageInfo { get; private set; }
         public decimal Price { get; private set; }

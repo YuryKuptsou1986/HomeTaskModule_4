@@ -1,7 +1,7 @@
-﻿using CartService.Domain.Entities;
+﻿using BasketService.Domain.Entities;
 using System.Collections.Generic;
 
-namespace CartService.DAL.Interfaces
+namespace BasketService.DAL.Interfaces
 {
     public interface ICartRepository
     {

@@ -1,6 +1,6 @@
-﻿using CartService.DAL.LiteDb.Entities;
+﻿using BasketService.DAL.LiteDb.Entities;
 
-namespace CartService.DAL.LiteDb.Providers
+namespace BasketService.DAL.LiteDb.Providers
 {
     public class LiteDbSettingsProvider : ILiteDbSettingsProvider
     {

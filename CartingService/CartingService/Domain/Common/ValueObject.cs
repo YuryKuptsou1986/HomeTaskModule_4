@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CartService.Domain.Common
+namespace BasketService.Domain.Common
 {
     public abstract class ValueObject
     {

@@ -1,4 +1,4 @@
-﻿namespace CartService.BLL.Entities.Insert
+﻿namespace BasketService.BLL.Entities.Insert
 {
     public class CartInsertViewModel
     {

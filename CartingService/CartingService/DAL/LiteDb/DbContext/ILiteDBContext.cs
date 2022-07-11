@@ -1,6 +1,6 @@
 ﻿using LiteDB;
 
-namespace CartService.DAL.LiteDb.DbContext
+namespace BasketService.DAL.LiteDb.DbContext
 {
     public interface ILiteDBContext
     {

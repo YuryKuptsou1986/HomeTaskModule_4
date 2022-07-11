@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CartService.BLL.Entities.View
+namespace BasketService.BLL.Entities.View
 {
     public class ImageInfoViewModel
     {

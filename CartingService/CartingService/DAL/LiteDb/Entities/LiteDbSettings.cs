@@ -1,4 +1,4 @@
-﻿namespace CartService.DAL.LiteDb.Entities
+﻿namespace BasketService.DAL.LiteDb.Entities
 {
     public class LiteDbSettings
     {

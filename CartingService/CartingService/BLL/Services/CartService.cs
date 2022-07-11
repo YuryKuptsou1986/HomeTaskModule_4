@@ -1,11 +1,11 @@
-﻿using CartService.Domain.Entities;
-using CartService.DAL.Interfaces;
-using CartService.BLL.Entities.Insert;
-using CartService.BLL.Entities.View;
+﻿using BasketService.Domain.Entities;
+using BasketService.DAL.Interfaces;
+using BasketService.BLL.Entities.Insert;
+using BasketService.BLL.Entities.View;
 using AutoMapper;
-using CartingService.DAL.Interfaces;
+using BasketService.DAL.Interfaces;
 
-namespace CartService.BLL.Services
+namespace BasketService.BLL.Services
 {
     public class CartService : ICartService
     {

@@ -1,9 +1,9 @@
-﻿using CartService.Domain.Entities;
-using CartService.DAL.LiteDb.DbContext;
-using CartService.DAL.Interfaces;
-using CartService.DAL.Exceptions;
+﻿using BasketService.Domain.Entities;
+using BasketService.DAL.LiteDb.DbContext;
+using BasketService.DAL.Interfaces;
+using BasketService.DAL.Exceptions;
 
-namespace CartService.DAL.LiteDb.Repositories
+namespace BasketService.DAL.LiteDb.Repositories
 {
     public class CartRepository : ICartRepository
     {

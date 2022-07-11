@@ -1,8 +1,8 @@
-﻿using CartService.DAL.Exceptions;
+﻿using BasketService.DAL.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace CartingService.Filters
+namespace BasketService.Filters
 {
     public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {

@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using CartService.BLL.Entities.Insert;
-using CartService.BLL.Entities.View;
-using CartService.Domain.Entities;
+using BasketService.BLL.Entities.Insert;
+using BasketService.BLL.Entities.View;
+using BasketService.Domain.Entities;
 
-namespace CartService.BLL.Mappings
+namespace BasketService.BLL.Mappings
 {
     public class AppMappingProfile : Profile
     {

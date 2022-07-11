@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "CartingService": {
+    "BasketService": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

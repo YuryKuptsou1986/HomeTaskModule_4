@@ -1,6 +1,6 @@
-﻿using CartService.Domain.Entities;
+﻿using BasketService.Domain.Entities;
 
-namespace CartingService.DAL.Interfaces
+namespace BasketService.DAL.Interfaces
 {
     public interface IItemRepository
     {

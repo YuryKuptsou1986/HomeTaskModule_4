@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CartService.BLL.Entities.Insert
+namespace BasketService.BLL.Entities.Insert
 {
     public class ImageInfoInsertViewModel
     {

@@ -1,7 +1,7 @@
-﻿using CartService.BLL.Entities.Insert;
-using CartService.BLL.Entities.View;
+﻿using BasketService.BLL.Entities.Insert;
+using BasketService.BLL.Entities.View;
 
-namespace CartService.BLL.Services
+namespace BasketService.BLL.Services
 {
     public interface ICartService
     {

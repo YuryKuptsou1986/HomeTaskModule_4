@@ -1,8 +1,8 @@
-﻿using CartService.BLL.Entities.Insert;
-using CartService.BLL.Services;
+﻿using BasketService.BLL.Entities.Insert;
+using BasketService.BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CartingService.Controllers.V1
+namespace BasketService.Controllers.V1
 {
     [ApiController]
     [ApiVersion("1.0")]

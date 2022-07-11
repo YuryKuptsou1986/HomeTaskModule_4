@@ -1,8 +1,8 @@
-﻿using CartService.DAL.LiteDb.Providers;
-using CartService.Domain.Entities;
+﻿using BasketService.DAL.LiteDb.Providers;
+using BasketService.Domain.Entities;
 using LiteDB;
 
-namespace CartService.DAL.LiteDb.DbContext
+namespace BasketService.DAL.LiteDb.DbContext
 {
     public class LiteDBContext : ILiteDBContext
     {

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace CartService.BLL.Entities.Insert
+namespace BasketService.BLL.Entities.Insert
 {
     public class ImageInfoInsertViewModelValidator : AbstractValidator<ImageInfoInsertViewModel>
     {

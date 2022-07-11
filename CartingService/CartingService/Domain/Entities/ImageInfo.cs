@@ -1,8 +1,8 @@
-﻿using CartService.Domain.Common;
+﻿using BasketService.Domain.Common;
 using System;
 using System.Collections.Generic;
 
-namespace CartService.Domain.Entities
+namespace BasketService.Domain.Entities
 {
     public class ImageInfo : ValueObject
     {

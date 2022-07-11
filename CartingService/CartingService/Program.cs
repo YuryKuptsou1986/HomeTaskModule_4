@@ -1,13 +1,13 @@
-using CartingService.DAL.Interfaces;
-using CartingService.DAL.LiteDb.Repositories;
-using CartingService.Filters;
-using CartService.BLL.Entities.Insert;
-using CartService.BLL.Mappings;
-using CartService.BLL.Services;
-using CartService.DAL.Interfaces;
-using CartService.DAL.LiteDb.DbContext;
-using CartService.DAL.LiteDb.Providers;
-using CartService.DAL.LiteDb.Repositories;
+using BasketService.DAL.Interfaces;
+using BasketService.DAL.LiteDb.Repositories;
+using BasketService.Filters;
+using BasketService.BLL.Entities.Insert;
+using BasketService.BLL.Mappings;
+using BasketService.BLL.Services;
+using BasketService.DAL.Interfaces;
+using BasketService.DAL.LiteDb.DbContext;
+using BasketService.DAL.LiteDb.Providers;
+using BasketService.DAL.LiteDb.Repositories;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
@@ -18,7 +18,7 @@ builder.Services.AddScoped<ILiteDbSettingsProvider, LiteDbSettingsProvider>();
 builder.Services.AddScoped<ILiteDBContext, LiteDBContext>();
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
-builder.Services.AddScoped<ICartService, CartService.BLL.Services.CartService>();
+builder.Services.AddScoped<ICartService, BasketService.BLL.Services.CartService>();
 
 builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 

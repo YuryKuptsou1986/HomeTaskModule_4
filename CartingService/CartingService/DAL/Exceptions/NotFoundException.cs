@@ -1,4 +1,4 @@
-﻿namespace CartService.DAL.Exceptions
+﻿namespace BasketService.DAL.Exceptions
 {
     internal class NotFoundException : Exception
     {

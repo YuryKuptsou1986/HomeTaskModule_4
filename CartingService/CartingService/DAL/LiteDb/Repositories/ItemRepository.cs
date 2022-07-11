@@ -1,9 +1,9 @@
-﻿using CartingService.DAL.Interfaces;
-using CartService.DAL.Exceptions;
-using CartService.DAL.LiteDb.DbContext;
-using CartService.Domain.Entities;
+﻿using BasketService.DAL.Interfaces;
+using BasketService.DAL.Exceptions;
+using BasketService.DAL.LiteDb.DbContext;
+using BasketService.Domain.Entities;
 
-namespace CartingService.DAL.LiteDb.Repositories
+namespace BasketService.DAL.LiteDb.Repositories
 {
     public class ItemRepository : IItemRepository
     {
@@ -19,7 +19,7 @@ namespace CartingService.DAL.LiteDb.Repositories
 
         public void AddItem(Item item)
         {
-            var itemCollection = _dbContext.Database.GetCollection<Item>(nameof(Item)).Insert(item);
+            _dbContext.Database.GetCollection<Item>(nameof(Item)).Insert(item);
         }
 
         public void DeleteItem(int itemId)
