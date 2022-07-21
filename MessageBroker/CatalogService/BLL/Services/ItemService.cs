@@ -7,17 +7,21 @@ using ViewModel.View;
 using ViewModel.Insert;
 using ViewModel.Page;
 using ViewModel.Query;
+using ServiceMessaging.MessageQueue;
+using ServiceMessaging.Items;
 
 namespace BLL.Services
 {
     internal class ItemService : IItemService
     {
         private readonly IItemRepository _repository;
+        private readonly IMessageQueueSender _mqService;
         private readonly IMapper _mapper;
 
-        public ItemService(IItemRepository repository, IMapper mapper)
+        public ItemService(IItemRepository repository, IMessageQueueSender mqService, IMapper mapper)
         {
             _repository = repository;
+            _mqService = mqService;
             _mapper = mapper;
         }
 
@@ -57,6 +61,16 @@ namespace BLL.Services
             var updatedItem = _mapper.Map<ItemUpdateDataModel>(item);
             updatedItem.Id = id;
             await _repository.UpdateAsync(updatedItem);
+
+            var messageItem = new ItemMessage {
+                ItemId = updatedItem.Id,
+                Name = updatedItem.Name,
+                Price = updatedItem.Price,
+                Amount = updatedItem.Amount,
+                ImageInfo = new ImageInfo() { Url = updatedItem.Image, AltText = updatedItem.Description }
+            };
+
+            _mqService.Publish(messageItem);
         }
     }
 }

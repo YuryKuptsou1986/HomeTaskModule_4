@@ -4,6 +4,10 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
+using ServiceMessaging.Configuration;
+using ServiceMessaging.MessageQueue;
+using ServiceMessaging.RabbitMQService;
+using ServiceMessaging.RabbitMQService.Connection;
 using ViewModel.Insert;
 using ViewModel.Update;
 using WebAPI.Filters;
@@ -24,6 +28,7 @@ builder.Services.AddScoped<IUrlHelper>(x => {
     return factory.GetUrlHelper(actionContext);
 });
 builder.Services.AddScoped<ItemResourceFactory>();
+builder.Services.AddSingleton<IMessageQueueSettingProvider, MessageQueueSettingProvider>();
 
 builder.Services.AddControllers(options =>
     options.Filters.Add(new ApiExceptionFilterAttribute()))
@@ -37,8 +42,11 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddSingleton<IRabbitMqConnectionFactory, RabbitMqConnectionFactory>();
+builder.Services.AddSingleton<IRabbitMqConnection, RabbitMqConnection>();
+builder.Services.AddTransient<IMessageQueueSender, RabbitMessageQueueSender>();
 
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()) {
     app.UseSwagger();

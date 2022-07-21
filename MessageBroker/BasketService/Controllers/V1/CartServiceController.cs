@@ -1,6 +1,7 @@
 ﻿using BasketService.BLL.Entities.Insert;
 using BasketService.BLL.Services;
 using Microsoft.AspNetCore.Mvc;
+using ServiceMessaging.MessageQueue;
 
 namespace BasketService.Controllers.V1
 {

@@ -6,5 +6,11 @@ namespace BasketService.DAL.Interfaces
     {
         public void AddItem(Item item);
         public void DeleteItem(int itemId);
+
+        public void UpdateItem(Item item);
+
+        void UpdateItems(IEnumerable<Item> items);
+
+        IEnumerable<Item> FindByItemId(int itemId);
     }
 }

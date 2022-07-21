@@ -3,7 +3,7 @@ using BasketService.DAL.Interfaces;
 using BasketService.BLL.Entities.Insert;
 using BasketService.BLL.Entities.View;
 using AutoMapper;
-using BasketService.DAL.Interfaces;
+using BasketService.BLL.Entities.Update;
 
 namespace BasketService.BLL.Services
 {
@@ -52,6 +52,19 @@ namespace BasketService.BLL.Services
         public CartViewModel GetCartById(string cartId)
         {
             return _mapper.Map<CartViewModel>(_cartRepository.GetCartById(cartId));
+        }
+
+        public void UpdateItem(ItemUpdateViewModel item)
+        {
+            var updatedItem = _mapper.Map<Item>(item);
+
+            var existingItems = _itemRepository.FindByItemId(item.ItemId).ToList();
+
+            existingItems.ToList().ForEach(x => {
+                x.Update(updatedItem.Name, updatedItem.Price, updatedItem.Quantity, updatedItem.ImageInfo);
+            });
+
+            _itemRepository.UpdateItems(existingItems);
         }
     }
 }

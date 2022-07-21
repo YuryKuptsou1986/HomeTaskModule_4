@@ -16,6 +16,11 @@
 
         public Item(string name, decimal price, int quantity, ImageInfo imageInfo = null)
         {
+            Update(name, price, quantity, imageInfo);
+        }
+
+        public void Update(string name, decimal price, int quantity, ImageInfo imageInfo = null)
+        {
             Name = name;
             Price = price;
             Quantity = quantity;
